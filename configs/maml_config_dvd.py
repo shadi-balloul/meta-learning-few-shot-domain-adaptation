@@ -23,7 +23,8 @@ new_config = {
                 'music', 'software', 'toys_games', 'video', 'MR', 'imdb'],
     'val_domains': ['sports_outdoors'],
     'test_domains': ['dvd'],
-    'sort_test_by_pmi' : True
+    'sort_test_by_pmi' : True,
+    'k_shot': 5
 }
 
 config = get_config(base_config, new_config)
