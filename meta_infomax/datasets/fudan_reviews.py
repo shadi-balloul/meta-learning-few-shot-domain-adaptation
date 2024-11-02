@@ -112,7 +112,7 @@ class MultiTaskDataset(Dataset):
             train_set, val_set, test_set = None, None, None
             if self.split in ('train', 'val', 'all'):
                 train_file = dataset + '.task.train'
-                train_val_set = pd.read_csv(self.data_dir / train_file, sep='\t', header=None, names=col_names, engine='python')
+                train_val_set = pd.read_csv(self.data_dir / train_file, sep='\t', header=None, names=col_names, engine='python', encoding='utf-8')
                 if validation_size == 0:  # only do split when validation_size > 0
                     train_set = train_val_set
                 else:
@@ -122,7 +122,7 @@ class MultiTaskDataset(Dataset):
                 train_set['domain'] = dataset  # record which domain it is in dataframe
             elif self.split in ('test', 'all'):
                 test_file = dataset + '.task.test'
-                test_set = pd.read_csv(self.data_dir / test_file, sep='\t', header=None, names=col_names, engine='python')
+                test_set = pd.read_csv(self.data_dir / test_file, sep='\t', header=None, names=col_names, engine='python', encoding='utf-8')
                 test_set['domain'] = dataset
             if self.split == 'all':
                 dfs.extend([train_set, val_set, test_set])

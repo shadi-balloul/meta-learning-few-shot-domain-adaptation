@@ -101,8 +101,8 @@ def remove_outlier_lengths(data, quantile: float = 0.995):
 from transformers import BertTokenizer, BertModel
 
 #                                           Model     | Tokenizer   | Pretrained weights shortcut
-TRANSFORMER_MODELS = {'bert-base-uncased': (BertModel, BertTokenizer, 'bert-base-uncased')}
-TRANSFORMER_EMBEDDING_DIMS = {'bert-base-uncased': 768}
+TRANSFORMER_MODELS = {'bert-base-uncased': (BertModel, BertTokenizer, 'bert-base-uncased'), 'bert-base-multilingual-uncased': (BertModel, BertTokenizer, 'bert-base-multilingual-uncased')}
+TRANSFORMER_EMBEDDING_DIMS = {'bert-base-uncased': 768, 'bert-base-multilingual-uncased': 768}
 
 
 # OPTIONAL: if you want to have more information on what's happening under the hood, activate the logger as follows

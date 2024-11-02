@@ -7,9 +7,9 @@ new_config = {
     'valid_freq': 5,
     'valid_chunks':4,       #### validation/test data will be chunked into this many batches to fit in memory
     'fast_weight_lr' : 5e-5,
-    'meta_lr' : 5e-5, 
+    'meta_lr' : 5e-5, ###### default 5e-5
     'collapse_domains' : False,
-    'exp_name': 'maml_train',
+    'exp_name': 'maml_train_MR_bmert_26-09-2024',
     'episodes': 500,
     'val_episodes':5,
     'test_episodes':1,
@@ -20,10 +20,11 @@ new_config = {
     'seed':40,
     'train_domains':  ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
                 'health_personal_care', 'kitchen_housewares', 'magazines',
-                'music', 'software', 'toys_games', 'video', 'MR', 'imdb'],
-    'val_domains': ['sports_outdoors'],
-    'test_domains': ['dvd'],
-    'sort_test_by_pmi' : True
+                'music', 'software', 'toys_games', 'video', 'dvd' , 'sports_outdoors'],
+    'val_domains': ['imdb'],
+    'test_domains': ['MR'],
+    'sort_test_by_pmi' : True,
+    'k_shot': 5
 }
 
 config = get_config(base_config, new_config)

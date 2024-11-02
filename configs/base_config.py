@@ -3,7 +3,7 @@ import logging
 base_config = {
     'trainer': 'multitask',
     'lr': 5e-5, # only for bert for now
-    'weight_decay': 0.01,
+    'weight_decay': 0.01, # default 0.01
     'warmup_steps': 100, # number of steps to warm up for learning rate scheduler
     'collapse_domains': True, # whether to load all datasets together or individually
     'epochs': 3,
@@ -14,9 +14,9 @@ base_config = {
     'clip_grad_norm': 1,
     'validation_size': 0, # percentage of train data used for validation data (over split, not over domain)
     'random_state': 42, # random state for reproducibility, currently only used for splitting train and val
-    'device': 'cuda',
-    'data_dir': 'data/mtl-dataset/',
-    'transformer_name': 'bert-base-uncased',
+    'device': 'cpu',
+    'data_dir': 'data/mtl-dataset/', #default 'data/mtl-dataset/'  other: data-mbert-utf8/mtl-dataset/
+    'transformer_name': 'bert-base-uncased', # default 'bert-base-uncased' other: bert-base-multilingual-uncased
     'domains': ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
                 'health_personal_care', 'imdb', 'kitchen_housewares', 'magazines',
                 'music', 'software', 'sports_outdoors', 'toys_games', 'video', 'MR', 'dvd'],

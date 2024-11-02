@@ -138,3 +138,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# by shadi
+..gitignore.swp
+data-mbert-utf8/
+data-mbert/
+venv3108/

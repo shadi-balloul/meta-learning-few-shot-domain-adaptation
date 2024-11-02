@@ -3,13 +3,13 @@ from .base_config import base_config, get_config
 
 new_config = {
     'trainer' : 'maml',
-    'n_domains' : 5,
+    'n_domains' : 10, #### default 5
     'valid_freq': 5,
     'valid_chunks':4,       #### validation/test data will be chunked into this many batches to fit in memory
     'fast_weight_lr' : 5e-5,
     'meta_lr' : 5e-5, 
     'collapse_domains' : False,
-    'exp_name': 'maml_train',
+    'exp_name': 'maml_train_lshift-dvd_10-shots_10-ways_241009',
     'episodes': 500,
     'val_episodes':5,
     'test_episodes':1,
@@ -20,10 +20,11 @@ new_config = {
     'seed':40,
     'train_domains':  ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
                 'health_personal_care', 'kitchen_housewares', 'magazines',
-                'music', 'software', 'toys_games', 'video', 'sports_outdoors', 'dvd'],
-    'val_domains': ['imdb'],
-    'test_domains': ['MR'],
-    'sort_test_by_pmi' : True
+                'music', 'software', 'toys_games', 'video', 'MR', 'imdb'],
+    'val_domains': ['sports_outdoors'],
+    'test_domains': ['dvd'],
+    'sort_test_by_pmi' : True,
+    'k_shot': 10
 }
 
 config = get_config(base_config, new_config)
