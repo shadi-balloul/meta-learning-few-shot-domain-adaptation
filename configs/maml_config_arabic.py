@@ -9,7 +9,7 @@ new_config = {
     'fast_weight_lr' : 5e-5,
     'meta_lr' : 5e-5, ###### default 5e-5
     'collapse_domains' : False,
-    'exp_name': 'maml_train_small_data_amazon_04-11-2024',
+    'exp_name': 'maml_train_small_data_arabic_04-11-2024',
     'episodes': 500,
     'val_episodes':5,
     'test_episodes':1,
@@ -18,11 +18,9 @@ new_config = {
     'unfreeze_layers': (10, 11),
     'num_examples' : 3500,
     'seed':40,
-    'train_domains':  ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
-                'health_personal_care', 'kitchen_housewares', 'magazines',
-                'music', 'software', 'toys_games', 'video', 'dvd' , 'sports_outdoors'],
-    'val_domains': ['imdb'],
-    'test_domains': ['MR'],
+    'train_domains':  ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard'],
+    'val_domains': ['labr'],
+    'test_domains': ['prod'],
     'sort_test_by_pmi' : True,
     'k_shot': 5
 }
