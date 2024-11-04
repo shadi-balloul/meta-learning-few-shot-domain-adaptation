@@ -9,7 +9,7 @@ new_config = {
     'fast_weight_lr' : 5e-5,
     'meta_lr' : 5e-5, ###### default 5e-5
     'collapse_domains' : False,
-    'exp_name': 'maml_train_small_data_arabic_04-11-2024',
+    'exp_name': 'maml_train_mbert_arabic_04-11-2024',
     'episodes': 500,
     'val_episodes':5,
     'test_episodes':1,

@@ -15,7 +15,7 @@ base_config = {
     'validation_size': 0, # percentage of train data used for validation data (over split, not over domain)
     'random_state': 42, # random state for reproducibility, currently only used for splitting train and val
     'device': 'cpu',
-    'data_dir': 'data/arabic/small/', #default 'data/mtl-dataset/'  other: data-mbert-utf8/mtl-dataset/
+    'data_dir': 'data/arabic/mbert/', #default 'data/mtl-dataset/'  other: data-mbert-utf8/mtl-dataset/
     'transformer_name': 'bert-base-multilingual-uncased', # default 'bert-base-uncased' other: bert-base-multilingual-uncased
     'domains': ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard', 'labr', 'prod'],
     'train_domains':  ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard'],
