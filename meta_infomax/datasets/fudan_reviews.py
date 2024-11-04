@@ -16,9 +16,14 @@ from collections.abc import Iterable
 
 pd.options.mode.chained_assignment = None  # ignore annoying pandas warnings
 
+DATASETS = ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard', 'labr', 'prod']
+
+"""
+Amazon Reviews Datasets
 DATASETS = ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
             'health_personal_care', 'imdb', 'kitchen_housewares', 'magazines',
             'music', 'software', 'sports_outdoors', 'toys_games', 'video', 'MR', 'dvd']
+"""
 
 
 class SingleTaskDataset(Dataset):

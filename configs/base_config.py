@@ -15,16 +15,12 @@ base_config = {
     'validation_size': 0, # percentage of train data used for validation data (over split, not over domain)
     'random_state': 42, # random state for reproducibility, currently only used for splitting train and val
     'device': 'cpu',
-    'data_dir': 'data/mtl-dataset/', #default 'data/mtl-dataset/'  other: data-mbert-utf8/mtl-dataset/
-    'transformer_name': 'bert-base-uncased', # default 'bert-base-uncased' other: bert-base-multilingual-uncased
-    'domains': ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
-                'health_personal_care', 'imdb', 'kitchen_housewares', 'magazines',
-                'music', 'software', 'sports_outdoors', 'toys_games', 'video', 'MR', 'dvd'],
-    'train_domains':  ['apparel', 'baby', 'books', 'camera_photo', 'electronics',
-                'health_personal_care', 'kitchen_housewares', 'magazines',
-                'music', 'software', 'toys_games', 'video', 'MR', 'imdb'],
-    'val_domains': ['sports_outdoors'],
-    'test_domains': ['dvd'],
+    'data_dir': 'data/arabic/small/', #default 'data/mtl-dataset/'  other: data-mbert-utf8/mtl-dataset/
+    'transformer_name': 'bert-base-multilingual-uncased', # default 'bert-base-uncased' other: bert-base-multilingual-uncased
+    'domains': ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard', 'labr', 'prod'],
+    'train_domains':  ['tead', 'tsac', 'att', 'res1', 'hard', 'astd', 'arsas', 'mov', 'htl', 'res2', 'bard'],
+    'val_domains': ['labr'],
+    'test_domains': ['prod'],
     'log_level': logging.INFO,
     'log_freq': 100
 }
