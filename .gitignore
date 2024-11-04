@@ -152,3 +152,4 @@ bin/pip3
 bin/pip3.10
 bin/python3.10
 lib64
+/.vscode*
