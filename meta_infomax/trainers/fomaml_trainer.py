@@ -110,6 +110,10 @@ class FOMAMLTrainer(BaseTrainer):
         for episode in range(self.current_episode, self.config['episodes']):
             self.current_episode = episode
 
+            ### Added by SHadi to reduce memory usage
+            ### Clear GPU cache
+            torch.cuda.empty_cache()
+
             ### break if too amny iterators exhausted
             if len(self.train_loader.keys()) < self.config['n_domains']:
                 logging.info("Breaking training: Not enough training data remaining")

@@ -7,7 +7,7 @@ base_config = {
     'warmup_steps': 100, # number of steps to warm up for learning rate scheduler
     'collapse_domains': True, # whether to load all datasets together or individually
     'epochs': 3,
-    'batch_size': 16,
+    'batch_size': 4, # defau;t is 16
     'valid_freq': 10,
     'save_freq': 100,
     'unfreeze_layers': (10, 11), # layers of bert to unfreeze
