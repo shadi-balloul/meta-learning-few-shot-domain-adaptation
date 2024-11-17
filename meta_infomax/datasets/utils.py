@@ -98,11 +98,23 @@ def remove_outlier_lengths(data, quantile: float = 0.995):
     return throw_away_ixs
 
 
-from transformers import BertTokenizer, BertModel
+from transformers import BertTokenizer, BertModel, AutoModel, AutoTokenizer
 
-#                                           Model     | Tokenizer   | Pretrained weights shortcut
-TRANSFORMER_MODELS = {'bert-base-uncased': (BertModel, BertTokenizer, 'bert-base-uncased'), 'bert-base-multilingual-uncased': (BertModel, BertTokenizer, 'bert-base-multilingual-uncased')}
-TRANSFORMER_EMBEDDING_DIMS = {'bert-base-uncased': 768, 'bert-base-multilingual-uncased': 768}
+TRANSFORMER_MODELS = {
+    'bert-base-uncased': (BertModel, BertTokenizer, 'bert-base-uncased'),
+    'bert-base-multilingual-uncased': (BertModel, BertTokenizer, 'bert-base-multilingual-uncased'),
+    # Adding AraBERT models
+    'aubmindlab/bert-base-arabertv2': (AutoModel, AutoTokenizer, 'aubmindlab/bert-base-arabertv2'),
+    # You can add other AraBERT variants as needed:
+    'aubmindlab/bert-large-arabertv2': (AutoModel, AutoTokenizer, 'aubmindlab/bert-large-arabertv2'),
+}
+
+TRANSFORMER_EMBEDDING_DIMS = {
+    'bert-base-uncased': 768,
+    'bert-base-multilingual-uncased': 768,
+    'aubmindlab/bert-base-arabertv2': 768,
+    'aubmindlab/bert-large-arabertv2': 1024,  # Large model has 1024 dimensions
+}
 
 
 # OPTIONAL: if you want to have more information on what's happening under the hood, activate the logger as follows
